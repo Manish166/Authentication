@@ -18,6 +18,7 @@ app.get("/", (req, res)=>{
         status: "healthy"
     })
 })
+app.use(errorHandler)
 
 app.listen(PORT, async ()=>{
     console.log(`listening at ${PORT} in ${NODE_ENV} mode`);
