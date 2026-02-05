@@ -1,6 +1,11 @@
 import express from 'express';
+import cors from 'cors'
+import cookieParser from 'cookie-parser';
+import { PORT } from './constants/env.js';
 
 const app = express();
+app.use(cors)
+app.use(cookieParser())
 
 const port = 3000;
 
@@ -9,8 +14,8 @@ app.get("/", (req, res)=>{
         status: "healthy"
     })
 })
-app.listen(port, ()=>{
-    console.log('listening at 3000')
+app.listen(PORT, ()=>{
+    console.log(`listening at ${PORT}`)
 })
 
 
