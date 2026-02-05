@@ -6,8 +6,8 @@ const getENV = (key: string): string => {
 };
 
 export const MONGO_URI = getENV("MONGO_URI");
-
 export const NODE_ENV = getENV("NODE_ENV");
+export const APP_ORIGIN = getENV("APP_ORIGIN");
 export const PORT = (getENV("PORT"));
 export const JWT_SECRET = getENV("JWT_SECRET");
 export const JWT_REFRESH_SECRET = getENV("JWT_REFRESH_SECRET");
